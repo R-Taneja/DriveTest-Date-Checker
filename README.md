@@ -1,2 +1,8 @@
 # DriveTest-Date-Checker
-A Python script that uses Selenium to check if there are any road test openings on DriveTest's website. 
+A year after getting my learner's permit, I decided I was finally ready to take a road test. However, due to COVID-19, DriveTest centers were booked for months and I had no option but to take one of the only available dates. I really didn't want to wait 4 months and I noticed that sometimes, the DriveTest center would show an opening for a road test in a few weeks or even days, not months. I wasn't exactly sure why (I suspected that people may have been cancelling their tests), but this got me excited. 
+
+The problem was that the openings would only show for a few minutes and then they would go away (I assumed that they were getting booked by other people), and I don't have the time to check the website 5 times a day. So, I created a Python script using Selenium that will open Chrome, visit the DriveTest website, enter my login credentials (redacted from this repository for security reasons), and tell me if there are any available road test bookings in the next month.
+
+**Note:** If you want to use this script yourself, you should know that it only works if you already have a road test booking that you're trying to reschedule to an earlier date. This was the situation I was in, so I designed the bot to go through the website and click specific links that will reschedule my current road test, not book a new one. However, it should be pretty easy to edit the bot to navigate through the website to book a new test instead.
+
+**Note 2:** I would usually include GIFs or screenshots of the script working for projects like these, but there is too much sensitive information on every page of the DriveTest website (past the login screen) and blurring out everything is just impractical.
