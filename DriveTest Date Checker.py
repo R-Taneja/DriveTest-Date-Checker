@@ -12,8 +12,8 @@ browser  = webdriver.Chrome(ChromeDriverManager().install())
 browser.get('https://drivetest.ca/book-a-road-test/booking.html#/verify-driver')
 
 # Enter the license number and expiry date
-license_number = '-----------------'
-license_expiry_date = '----/--/--'
+license_number = input('Enter your driver\'s license number, exactly as it appears on your license: ')
+license_expiry_date = input('Enter your driver\'s license expiry date, exactly as it appears on your license: ')
 browser.find_element_by_name('licenceNumber').send_keys(license_number)
 browser.find_element_by_name('licenceExpiryDate').send_keys(license_expiry_date)
 
