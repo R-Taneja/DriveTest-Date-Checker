@@ -47,7 +47,7 @@ try:
 except TimeoutException:
     print ("Loading took too much time.")
 
-# Click on the location and save a screenshot of the available/unavailable dates
+# Click on the location and view available dates
 browser.find_element_by_xpath('//*[@id="9580"]').click();
 browser.find_element_by_xpath('//*[@id="booking-location"]/div/div/form/div[2]/div[2]/button').click();
 try:
