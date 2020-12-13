@@ -5,4 +5,6 @@ The problem was that the openings would only show for a few minutes and then the
 
 **Note:** If you want to use this script yourself, you should know that it only works if you already have a road test booking that you're trying to reschedule to an earlier date. This was the situation I was in, so I designed the bot to go through the website and click specific links that will reschedule my current road test, not book a new one. However, it should be pretty easy to edit the bot to navigate through the website to book a new test instead.
 
-**Note 2:** I would usually include GIFs or screenshots of the script working for projects like these, but there is too much sensitive information on every page of the DriveTest website (past the login screen) and blurring out everything is just impractical.
+**Note 2:** The script currently only works for 2 locations: Brampton and Oakville. I'll update this repository with more locations very soon, but if you want to do it yourself, you'll need to add the XPath values for each location you want the program to go through to the ```locations``` list. You will also need to update the logic for displaying the location's name on line 73 (add another if statement per location).
+
+**Note 3:** I would usually include GIFs or screenshots of the script working for projects like these, but there is too much sensitive information on every page of the DriveTest website (past the login screen) and blurring out everything is just impractical.
