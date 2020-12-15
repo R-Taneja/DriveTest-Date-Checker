@@ -28,24 +28,24 @@ for location in locations:
 
     # Wait for the page to load
     try:
-        wait = WebDriverWait(browser, 120).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="7266086"]/div/div/div[2]/div/span[2]/button')))
+        wait = WebDriverWait(browser, 120).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="booking-dashboard"]/div/div/div/div[2]/div/div[5]/p/a')))
     except TimeoutException:
         print ("Loading took too much time.")
 
-    # Scroll down so the reschedule button comes into view
-    browser.execute_script("window.scrollTo(0, 250)") 
-
-    # Click the reschedule button
-    browser.find_element_by_xpath('//*[@id="7266086"]/div/div/div[2]/div/span[2]/button').click();
+    # Click the book a road test button
+    browser.find_element_by_xpath('//*[@id="booking-dashboard"]/div/div/div/div[2]/div/div[5]/p/a').click();
 
     # Wait for the page to load
     try:
-        wait = WebDriverWait(browser, 120).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="page_book_a_road_test_booking"]/div[4]/div/div/div/div/div/div[4]/button[1]')))
+        wait = WebDriverWait(browser, 120).until(EC.presence_of_element_located((By.XPATH, '//*[@id="lic_G2"]')))
     except TimeoutException:
         print ("Loading took too much time.")
+    
+    # Click the G2 button
+    browser.find_element_by_xpath('//*[@id="G2btn"]').click();
 
-    # Click the reschedule button on the popup
-    browser.find_element_by_xpath('//*[@id="page_book_a_road_test_booking"]/div[4]/div/div/div/div/div/div[4]/button[1]').click();
+    # Click the continue buttons
+    browser.find_element_by_xpath('//*[@id="booking-licence"]/div/form/div/div[4]/button').click();
 
     # Wait for the page to load
     try:
