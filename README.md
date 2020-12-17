@@ -5,6 +5,6 @@ The problem was that the openings would only show for a few minutes and then the
 
 **Note:** If you want to use this script yourself, it only works if you already have an account with DriveTest (you registered for a road test previously).
 
-**Note 2:** The script currently only works for 2 locations: Brampton and Oakville. I'll update this repository with more locations very soon, but if you want to do it yourself, you'll need to add the XPath values for each location you want the program to go through to the ```locations``` list. You will also need to update the logic for displaying the location's name on line 73 (add another if statement per location).
+**Note 2:** The script currently only works for certain locations near the GTA (about 15 locations). I'll update this repository with more locations soon, but if you want to do it yourself, you'll need to add the XPath values for each location you want the program to go through to the ```locations``` list. You will also need to update the logic for displaying the location's name on line 73.
 
 **Note 3:** I would usually include GIFs or screenshots of the script working for projects like these, but there is too much sensitive information on every page of the DriveTest website (past the login screen) and blurring out everything is just impractical.
