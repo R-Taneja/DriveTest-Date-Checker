@@ -9,7 +9,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 license_number = input('Enter your driver\'s license number, exactly as it appears on your license: ')
 license_expiry_date = input('Enter your driver\'s license expiry date, exactly as it appears on your license: ')
 
-locations = ['//*[@id="9580"]', '//*[@id="9556"]']
+locations = ['//*[@id="9556"]', '//*[@id="9557"]', '//*[@id="9559"]', '//*[@id="9567"]', '//*[@id="9597"]', '//*[@id="9574"]', '//*[@id="12448"]', '//*[@id="9552"]', '//*[@id="9580"]', '//*[@id="9581"]', '//*[@id="9596"]', '//*[@id="9602"]', '//*[@id="9565"]', '//*[@id="9579"]', '//*[@id="9592"]']
 location_number = 0
 
 for location in locations:
@@ -55,6 +55,10 @@ for location in locations:
 
     # Click on the location and view available dates
     browser.find_element_by_xpath(location).click();
+    try:
+        wait = WebDriverWait(browser, 120).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="booking-location"]/div/div/form/div[2]/div[2]/button')))
+    except TimeoutException:
+        print ("Loading took too much time.")
     browser.find_element_by_xpath('//*[@id="booking-location"]/div/div/form/div[2]/div[2]/button').click();
     try:
         wait = WebDriverWait(browser, 120).until(EC.element_to_be_clickable((By.XPATH, '//*[@id="driver-info"]/div[1]/div[1]/div[1]/a[2]')))
@@ -71,9 +75,35 @@ for location in locations:
             available_dates.append(str(date.get_attribute("title")))
 
     if location_number == 1:
-        print("Oakville:")
-    if location_number == 2:
         print("Brampton:")
+    if location_number == 2:
+        print("Brantford:")
+    if location_number == 3:
+        print("Burlington:")
+    if location_number == 4:
+        print("Guelph:")
+    if location_number == 5:
+        print("Hamilton:")
+    if location_number == 6:
+        print("Kitchener:")
+    if location_number == 7:
+        print("Mississauga:")
+    if location_number == 8:
+        print("Newmarket:")
+    if location_number == 9:
+        print("Oakville:")
+    if location_number == 10:
+        print("Orangeville:")
+    if location_number == 11:
+        print("St Catharines:")
+    if location_number == 12:
+        print("Toronto Downsview:")
+    if location_number == 13:
+        print("Toronto Etobicoke:")
+    if location_number == 14:
+        print("Toronto Metro East:")
+    if location_number == 15:
+        print("Toronto Port Union:")
 
     if not available_dates:
         print("No available dates")
